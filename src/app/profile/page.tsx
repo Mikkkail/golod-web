@@ -50,7 +50,7 @@ export default function ProfilePage() {
           <h2 className="mb-6 text-center text-5xl font-black uppercase italic tracking-tighter text-white md:text-7xl">
             Отзывы <span className="text-orange-500">гостей</span>
           </h2>
-          <p className="mx-auto mb-16 max-w-2xl text-center text-xl font-light text-gray-400">
+          <p className="mx-auto mb-16 max-w-7xl text-center text-xl font-light text-gray-400">
             <span className="font-bold text-amber-400">4,8</span> (5 звёзд) · 113 оценок в{' '}
             <a
               href="https://yandex.ru/maps/org/golod/38136415699/reviews/"

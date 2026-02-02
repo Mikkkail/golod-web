@@ -102,7 +102,7 @@ export function ProductCustomizer({ isOpen, onClose, product }: ProductCustomize
             animate={{ y: 0 }}
             exit={{ y: '100%' }}
             transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-            className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-t-3xl border border-white/10 bg-[#0a0a0a] md:rounded-3xl"
+            className="max-h-[90vh] w-full max-w-7xl overflow-y-auto rounded-t-3xl border border-white/10 bg-[#0a0a0a] md:rounded-3xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Заголовок с кнопкой закрытия */}

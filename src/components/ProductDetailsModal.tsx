@@ -74,7 +74,7 @@ export default function ProductDetailsModal({
       <div className="absolute inset-0 bg-black/70" />
 
       <motion.div
-        className="relative z-10 flex h-[85vh] w-full max-w-3xl flex-col overflow-hidden rounded-t-3xl bg-[#141414] text-white shadow-2xl"
+        className="relative z-10 flex h-[85vh] w-full max-w-7xl flex-col overflow-hidden rounded-t-3xl bg-[#141414] text-white shadow-2xl"
         initial={{ y: '100%' }}
         animate={{ y: 0 }}
         transition={{ type: 'spring', stiffness: 140, damping: 22 }}

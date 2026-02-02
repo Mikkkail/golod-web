@@ -104,7 +104,7 @@ export function HeroSection() {
             </h1>
           </div>
 
-          <p className="mx-auto mb-12 max-w-lg text-xl font-light leading-relaxed text-gray-300 drop-shadow-md lg:mx-0">
+          <p className="mx-auto mb-12 max-w-7xl text-xl font-light leading-relaxed text-gray-300 drop-shadow-md lg:mx-0">
             Смотри, как мы готовим твой идеальный бургер. Открытая кухня, мраморная говядина и
             огонь.
           </p>

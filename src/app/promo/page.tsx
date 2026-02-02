@@ -22,7 +22,7 @@ export default function PromoPage() {
               акции
             </span>
           </h1>
-          <p className="mx-auto mb-16 max-w-2xl text-xl font-light text-gray-400">
+          <p className="mx-auto mb-16 max-w-7xl text-xl font-light text-gray-400">
             Лови момент. Вкуснее уже не будет.
           </p>
 

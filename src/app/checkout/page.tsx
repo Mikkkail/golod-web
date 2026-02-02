@@ -28,7 +28,7 @@ export default function CheckoutPage() {
 
   return (
     <main className="min-h-screen bg-[#0f0f0f] px-4 pb-12 pt-24 text-white">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-7xl">
         {/* Кнопка назад */}
         <Link
           href="/"

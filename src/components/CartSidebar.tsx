@@ -19,7 +19,7 @@ export default function CartSidebar() {
       />
 
       {/* Панель справа */}
-      <div className="relative flex h-full w-full max-w-md flex-col border-l border-white/10 bg-[#0f0f0f] shadow-2xl duration-300 animate-in slide-in-from-right">
+      <div className="relative flex h-full w-full max-w-xl flex-col border-l border-white/10 bg-[#0f0f0f] shadow-2xl duration-300 animate-in slide-in-from-right">
         <div className="flex items-center justify-between border-b border-white/10 bg-[#141414] p-6">
           <h2 className="flex items-center gap-2 text-xl font-bold text-white">
             <ShoppingBag className="text-orange-500" />

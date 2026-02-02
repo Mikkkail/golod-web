@@ -34,7 +34,7 @@ export function Footer() {
           <h2 className="text-3xl font-black uppercase italic tracking-tighter">
             GOLOD<span className="text-orange-500">.</span>
           </h2>
-          <p className="max-w-sm text-lg text-gray-400">
+          <p className="max-w-7xl text-lg text-gray-400">
             Мы меняем представление о фастфуде. Мраморная говядина, свежие овощи и никакого
             компромисса во вкусе.
           </p>
