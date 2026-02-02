@@ -19,9 +19,10 @@
   }
 
   body {
-    @apply overflow-x-hidden bg-[#050505] text-white antialiased;
-    /* Привязка шрифтов через переменные (настроим в layout.tsx) */
+    @apply overflow-x-hidden text-white antialiased;
     font-family: var(--font-inter), sans-serif;
+    /* Уголь и Глубина — матовая глубина вместо плоского черного */
+    background: radial-gradient(circle at center, #1a1a1a 0%, #050505 100%);
   }
 
   /* H1, H2 — премиальная типографика (Awwwards-style) */
@@ -95,6 +96,16 @@
   /* Свечение при наведении */
   .bento-card:hover {
     box-shadow: 0 0 30px -5px rgba(234, 88, 12, 0.15);
+  }
+
+  /* Огонь и Жар — фирменный градиент для кнопок и акцентов */
+  .bg-fire {
+    background: linear-gradient(135deg, #ff8c00 0%, #f97316 50%, #dc2626 100%);
+  }
+
+  /* Кинематографичное затемнение — оверлей поверх фото/видео для читаемости текста */
+  .overlay-cinema {
+    background: linear-gradient(to top, #000000 0%, rgba(0, 0, 0, 0.7) 40%, transparent 100%);
   }
 }
 

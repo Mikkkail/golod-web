@@ -31,8 +31,8 @@ export default function MenuPage() {
           <source src="/burger-vid.mp4" type="video/mp4" />
         </video>
         
-        {/* Градиент снизу, чтобы видео плавно переходило в черный */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-black/60" />
+        {/* Кинематографичное затемнение для читаемости текста */}
+        <div className="absolute inset-0 overlay-cinema" />
 
         <div className="relative z-10 text-center px-4">
           <motion.div style={{ y: yText }} className="space-y-6">
@@ -46,7 +46,7 @@ export default function MenuPage() {
             {/* Кнопка с якорем на меню */}
             <button 
               onClick={() => document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' })}
-              className="mt-8 group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-white px-12 py-4 font-bold text-black transition-all hover:bg-orange-500 hover:text-white"
+              className="mt-8 group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-fire px-12 py-4 font-bold text-white transition-opacity hover:opacity-90"
             >
               <span className="relative z-10 text-lg tracking-widest uppercase">Смотреть меню</span>
             </button>
@@ -110,7 +110,7 @@ export default function MenuPage() {
                   {item.title}
                 </h3>
                 <p className="text-gray-400 text-sm line-clamp-2">{item.description}</p>
-                <button className="w-full mt-4 py-4 border border-white/20 rounded-xl font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all">
+                <button className="w-full mt-4 py-4 rounded-xl border border-white/20 font-bold uppercase tracking-widest transition-all hover:border-transparent hover:bg-fire hover:text-white">
                   В корзину
                 </button>
               </div>

@@ -13,8 +13,8 @@ export default function LandingPage() {
         <source src="/burger-vid.mp4" type="video/mp4" />
       </video>
 
-      {/* Оверлей для глубины */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40" />
+      {/* Кинематографичное затемнение для читаемости текста */}
+      <div className="absolute inset-0 overlay-cinema" />
 
       {/* Контент */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
@@ -50,7 +50,7 @@ export default function LandingPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
         >
-          <Link href="/menu" className="group relative block overflow-hidden bg-orange-600 px-16 py-6 text-2xl font-black text-white transition-all hover:bg-white hover:text-black">
+          <Link href="/menu" className="group relative block overflow-hidden bg-fire px-16 py-6 text-2xl font-black text-white transition-opacity hover:opacity-90">
             ЗАКАЗАТЬ ОНЛАЙН
           </Link>
         </motion.div>
