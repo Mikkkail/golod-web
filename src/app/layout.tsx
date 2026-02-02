@@ -58,7 +58,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ru" className={`${inter.variable} ${oswald.variable}`}>
+    <html lang="ru" className={`scroll-smooth ${inter.variable} ${oswald.variable}`}>
       <head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#F97316" />
@@ -89,9 +89,10 @@ export default function RootLayout({
           {/* 2. Вставляем Прелоадер самым первым */}
           <Preloader />
 
-          {/* Desktop-only эффекты */}
+          {/* Lenis smooth scroll — на всех экранах */}
+          <SmoothScroll />
+          {/* Desktop-only: кастомный курсор */}
           <div className="hidden md:block">
-            <SmoothScroll />
             <CustomCursor />
           </div>
 
