@@ -50,8 +50,14 @@ export default function LandingPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
         >
-          <Link href="/menu" className="group relative block overflow-hidden bg-fire px-16 py-6 text-2xl font-black text-white transition-opacity hover:opacity-90">
-            ЗАКАЗАТЬ ОНЛАЙН
+          <Link href="/menu" className="cssbuttons-io-button">
+            ЗАКАЗАТЬ
+            <div className="icon">
+              <svg height="28" width="28" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor" />
+              </svg>
+            </div>
           </Link>
         </motion.div>
       </div>

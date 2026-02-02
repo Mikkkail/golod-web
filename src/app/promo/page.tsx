@@ -30,7 +30,7 @@ export default function PromoPage() {
             {/* Карточка 1: Доставка */}
             <div className="group rounded-[2.5rem] border border-white/10 bg-white/5 p-10 text-left backdrop-blur-xl transition-all hover:-translate-y-2">
               <div className="mb-6">
-                <Truck className="h-16 w-16 text-white drop-shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-colors group-hover:text-blue-400" />
+                <Truck className="h-16 w-16 text-white drop-shadow-[0_0_20px_rgba(234,88,12,0.5)] transition-colors group-hover:text-orange-400" />
               </div>
               <h3 className="mb-2 text-2xl font-black uppercase text-white">Бесплатная доставка</h3>
               <p className="text-lg text-gray-400">При заказе от 1000₽ привезем за наш счет.</p>
