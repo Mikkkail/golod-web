@@ -16,15 +16,20 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
-    @apply bg-[#050505] text-white antialiased overflow-x-hidden;
+    @apply overflow-x-hidden bg-[#050505] text-white antialiased;
     /* Привязка шрифтов через переменные (настроим в layout.tsx) */
     font-family: var(--font-inter), sans-serif;
   }
 
   /* Заголовки - дерзкие и узкие */
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-oswald), sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.02em;
@@ -38,7 +43,7 @@
 
   /* Эффект шума (Grain) поверх всего сайта */
   body::before {
-    content: "";
+    content: '';
     position: fixed;
     top: 0;
     left: 0;
@@ -47,14 +52,14 @@
     opacity: 0.05; /* Еле заметный шум */
     pointer-events: none;
     z-index: 50;
-    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    background-image: url('https://grainy-gradients.vercel.app/noise.svg');
     mix-blend-mode: overlay;
   }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-red-600;
+    @apply bg-gradient-to-r from-orange-400 to-red-600 bg-clip-text text-transparent;
   }
 
   /* Skeleton Loader Animation */
@@ -69,26 +74,20 @@
 
   .animate-shimmer {
     animation: shimmer 2s infinite linear;
-    background: linear-gradient(
-      to right,
-      #1A1A1A 0%,
-      #2A2A2A 20%,
-      #1A1A1A 40%,
-      #1A1A1A 100%
-    );
+    background: linear-gradient(to right, #1a1a1a 0%, #2a2a2a 20%, #1a1a1a 40%, #1a1a1a 100%);
     background-size: 1000px 100%;
   }
 
   /* Эффект стекла */
   .glass {
-    @apply bg-white/5 backdrop-blur-md border border-white/10;
+    @apply border border-white/10 bg-white/5 backdrop-blur-md;
   }
 
   /* Карточки Bento */
   .bento-card {
-    @apply relative overflow-hidden rounded-3xl p-6 bg-[#0f0f0f] border border-white/5 hover:border-orange-500/30 transition-all duration-300;
+    @apply relative overflow-hidden rounded-3xl border border-white/5 bg-[#0f0f0f] p-6 transition-all duration-300 hover:border-orange-500/30;
   }
-  
+
   /* Свечение при наведении */
   .bento-card:hover {
     box-shadow: 0 0 30px -5px rgba(234, 88, 12, 0.15);
@@ -132,14 +131,14 @@
 ::selection {
   background: rgba(234, 88, 12, 0.3);
   color: white;
-}/* Скрываем стандартный курсор только на компьютерах (если CustomCursor активен) */
+} /* Скрываем стандартный курсор только на компьютерах (если CustomCursor активен) */
 @media (min-width: 768px) {
-  .desktop-custom-cursor body, 
-  .desktop-custom-cursor a, 
+  .desktop-custom-cursor body,
+  .desktop-custom-cursor a,
   .desktop-custom-cursor button {
     cursor: none !important;
   }
-}/* Анимация пробегающего блика для стекла */
+} /* Анимация пробегающего блика для стекла */
 @keyframes shimmer {
   100% {
     transform: translateX(100%);
@@ -163,7 +162,7 @@
       transition-duration: 0.01ms !important;
     }
   }
-  
+
   /* Улучшаем производительность скролла */
   * {
     -webkit-overflow-scrolling: touch;

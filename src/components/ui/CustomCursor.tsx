@@ -7,7 +7,7 @@ export function CustomCursor() {
   const [isHovered, setIsHovered] = useState(false)
   const cursorX = useMotionValue(-100)
   const cursorY = useMotionValue(-100)
-  
+
   // Пружина для плавного отставания (эффект желе)
   const springConfig = { damping: 25, stiffness: 700 }
   const cursorXSpring = useSpring(cursorX, springConfig)
@@ -22,7 +22,12 @@ export function CustomCursor() {
     const handleMouseOver = (e: MouseEvent) => {
       // Если навели на кнопку или ссылку - курсор увеличивается
       const target = e.target as HTMLElement
-      if (target.tagName === 'BUTTON' || target.tagName === 'A' || target.closest('button') || target.closest('a')) {
+      if (
+        target.tagName === 'BUTTON' ||
+        target.tagName === 'A' ||
+        target.closest('button') ||
+        target.closest('a')
+      ) {
         setIsHovered(true)
       } else {
         setIsHovered(false)
@@ -41,7 +46,7 @@ export function CustomCursor() {
   // Скрываем на мобильных устройствах (там курсор не нужен)
   return (
     <motion.div
-      className="fixed top-0 left-0 pointer-events-none z-[9999] mix-blend-difference hidden md:block"
+      className="pointer-events-none fixed left-0 top-0 z-[9999] hidden mix-blend-difference md:block"
       style={{
         x: cursorXSpring,
         y: cursorYSpring,
@@ -49,15 +54,15 @@ export function CustomCursor() {
     >
       {/* Точка внутри */}
       <motion.div
-        className="absolute w-4 h-4 bg-orange-500 rounded-full -translate-x-1/2 -translate-y-1/2"
+        className="absolute h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-orange-500"
         animate={{
           scale: isHovered ? 0.5 : 1,
         }}
       />
-      
+
       {/* Кольцо снаружи */}
       <motion.div
-        className="absolute border border-orange-500 rounded-full -translate-x-1/2 -translate-y-1/2"
+        className="absolute -translate-x-1/2 -translate-y-1/2 rounded-full border border-orange-500"
         animate={{
           width: isHovered ? 60 : 20,
           height: isHovered ? 60 : 20,

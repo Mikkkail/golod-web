@@ -30,7 +30,7 @@ export const menuData = [
         description: 'Флагманский бургер с большой котлетой и фирменным соусом.',
         price: '380₽',
         image: '/images/golodniy%20buger.jpg',
-        weight: '350г'
+        weight: '350г',
       },
       {
         id: '2',
@@ -38,7 +38,7 @@ export const menuData = [
         description: 'Мощный вкус для сильного голода.',
         price: '320₽',
         image: '/images/ham-bit.jpg', // Исправлено
-        weight: '300г'
+        weight: '300г',
       },
       {
         id: '3',
@@ -46,7 +46,7 @@ export const menuData = [
         description: 'Нежное куриное филе в хрустящей панировке.',
         price: '290₽',
         image: '/images/burger-ham.jpg',
-        weight: '280г'
+        weight: '280г',
       },
       {
         id: '4',
@@ -54,7 +54,7 @@ export const menuData = [
         description: 'Длинная булочка, куриная котлета и майонез.',
         price: '250₽',
         image: '/images/long%20chiken.jpg',
-        weight: '260г'
+        weight: '260г',
       },
       {
         id: '5',
@@ -62,7 +62,7 @@ export const menuData = [
         description: 'Просто и со вкусом. Ничего лишнего.',
         price: '200₽',
         image: '/images/klassicheskiy.jpg',
-        weight: '240г'
+        weight: '240г',
       },
       {
         id: '6',
@@ -70,7 +70,7 @@ export const menuData = [
         description: 'Настоящая мясная классика.',
         price: '260₽',
         image: '/images/govyazhiy.jpg',
-        weight: '250г'
+        weight: '250г',
       },
       {
         id: '7',
@@ -78,9 +78,9 @@ export const menuData = [
         description: 'С пикантным восточным соусом.',
         price: '280₽',
         image: '/images/arabskiy.jpg',
-        weight: '270г'
-      }
-    ]
+        weight: '270г',
+      },
+    ],
   },
   {
     id: 'rolls',
@@ -93,7 +93,7 @@ export const menuData = [
         description: 'С охотничьими колбасками и соусом барбекю.',
         price: '240₽',
         image: '/images/tvister-oxot.jpg',
-        weight: '220г'
+        weight: '220г',
       },
       {
         id: '11',
@@ -101,15 +101,15 @@ export const menuData = [
         description: 'Курица, салат и тортилья.',
         price: '230₽',
         image: '/images/tvister-ham-chiken.jpg', // Исправлено
-        weight: '210г'
+        weight: '210г',
       },
       {
         id: '12',
         title: 'Шаурма Классик',
         description: 'Традиционный рецепт.',
         price: '250₽',
-        image: '/images/arabka.jpg', 
-        weight: '350г'
+        image: '/images/arabka.jpg',
+        weight: '350г',
       },
       {
         id: '13',
@@ -117,7 +117,7 @@ export const menuData = [
         description: 'Много расплавленного сыра.',
         price: '270₽',
         image: '/images/twister.jpg',
-        weight: '360г'
+        weight: '360г',
       },
       {
         id: '14',
@@ -125,9 +125,9 @@ export const menuData = [
         description: 'Особый рецепт в арабском хлебе.',
         price: '260₽',
         image: '/images/arabka.jpg',
-        weight: '300г'
-      }
-    ]
+        weight: '300г',
+      },
+    ],
   },
   {
     id: 'snacks',
@@ -140,7 +140,7 @@ export const menuData = [
         description: 'Золотистая и хрустящая.',
         price: '120₽',
         image: '/images/fri.jpg',
-        weight: '100г'
+        weight: '100г',
       },
       {
         id: '21',
@@ -148,7 +148,7 @@ export const menuData = [
         description: 'Нежное куриное филе (6 шт).',
         price: '150₽',
         image: '/images/nagetsy.jpg',
-        weight: '120г'
+        weight: '120г',
       },
       {
         id: '22',
@@ -156,7 +156,7 @@ export const menuData = [
         description: 'Для тех, кто любит погорячее.',
         price: '280₽',
         image: '/images/ostrie-krylishki.jpg', // Исправлено
-        weight: '250г'
+        weight: '250г',
       },
       {
         id: '23',
@@ -164,16 +164,16 @@ export const menuData = [
         description: 'Фирменная острая закуска.',
         price: '300₽',
         image: '/images/ostriy-mech.jpg',
-        weight: '200г'
+        weight: '200г',
       },
-       {
+      {
         id: '24',
         title: 'Охотничий',
         description: 'Колбаски гриль.',
         price: '220₽',
         image: '/images/oxotnichiy.jpg',
-        weight: '180г'
-      }
-    ]
-  }
+        weight: '180г',
+      },
+    ],
+  },
 ]

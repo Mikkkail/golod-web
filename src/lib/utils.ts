@@ -1,5 +1,5 @@
-import { type ClassValue, clsx } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { type ClassValue, clsx } from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -33,9 +33,7 @@ export function generateStructuredData(type: string, data: any) {
   if (data.workHours) {
     schema.openingHoursSpecification = {
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: [
-        'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'
-      ],
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
       opens: '00:00',
       closes: '23:59',
     }

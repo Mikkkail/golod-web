@@ -19,23 +19,23 @@ export function FloatingActionMenu() {
     {
       icon: <Home className="h-5 w-5" />,
       label: 'Главная',
-      action: () => scrollToSection('home')
+      action: () => scrollToSection('home'),
     },
     {
       icon: <Menu className="h-5 w-5" />,
       label: 'Меню',
-      action: () => scrollToSection('menu')
+      action: () => scrollToSection('menu'),
     },
     {
       icon: <Phone className="h-5 w-5" />,
       label: 'Контакты',
-      action: () => scrollToSection('contact')
+      action: () => scrollToSection('contact'),
     },
     {
       icon: <ShoppingBag className="h-5 w-5" />,
       label: 'Заказать',
-      action: () => window.open('https://wa.me/79286780666', '_blank')
-    }
+      action: () => window.open('https://wa.me/79286780666', '_blank'),
+    },
   ]
 
   const scrollToSection = (id: string) => {
@@ -76,32 +76,30 @@ export function FloatingActionMenu() {
                 <motion.button
                   key={item.label}
                   initial={{ opacity: 0, x: 20, scale: 0.8 }}
-                  animate={{ 
-                    opacity: 1, 
-                    x: 0, 
+                  animate={{
+                    opacity: 1,
+                    x: 0,
                     scale: 1,
                     transition: {
                       delay: index * 0.05,
                       type: 'spring',
                       stiffness: 200,
-                      damping: 20
-                    }
+                      damping: 20,
+                    },
                   }}
-                  exit={{ 
-                    opacity: 0, 
-                    x: 20, 
+                  exit={{
+                    opacity: 0,
+                    x: 20,
                     scale: 0.8,
-                    transition: { delay: (menuItems.length - index) * 0.03 }
+                    transition: { delay: (menuItems.length - index) * 0.03 },
                   }}
                   onClick={item.action}
-                  className="group flex items-center gap-3 rounded-full bg-accent/90 backdrop-blur-md px-4 py-3 shadow-xl transition-all hover:bg-primary hover:shadow-2xl hover:shadow-primary/50"
+                  className="group flex items-center gap-3 rounded-full bg-accent/90 px-4 py-3 shadow-xl backdrop-blur-md transition-all hover:bg-primary hover:shadow-2xl hover:shadow-primary/50"
                 >
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground transition-colors group-hover:bg-primary-foreground group-hover:text-primary">
                     {item.icon}
                   </div>
-                  <span className="pr-2 text-sm font-semibold">
-                    {item.label}
-                  </span>
+                  <span className="pr-2 text-sm font-semibold">{item.label}</span>
                 </motion.button>
               ))}
             </motion.div>
@@ -112,15 +110,15 @@ export function FloatingActionMenu() {
         <motion.button
           onClick={() => setIsOpen(!isOpen)}
           className={cn(
-            "flex h-14 w-14 items-center justify-center rounded-full shadow-2xl transition-all",
+            'flex h-14 w-14 items-center justify-center rounded-full shadow-2xl transition-all',
             isOpen
-              ? "bg-foreground text-background shadow-foreground/50"
-              : "bg-primary text-primary-foreground shadow-primary/50"
+              ? 'bg-foreground text-background shadow-foreground/50'
+              : 'bg-primary text-primary-foreground shadow-primary/50'
           )}
           whileTap={{ scale: 0.9 }}
-          animate={{ 
+          animate={{
             rotate: isOpen ? 90 : 0,
-            scale: isOpen ? 1.1 : 1
+            scale: isOpen ? 1.1 : 1,
           }}
           transition={{ type: 'spring', stiffness: 200, damping: 20 }}
         >
@@ -155,10 +153,10 @@ export function FloatingActionMenu() {
             className="absolute inset-0 -z-10 rounded-full bg-primary"
             initial={{ scale: 1, opacity: 0.5 }}
             animate={{ scale: 1.5, opacity: 0 }}
-            transition={{ 
-              duration: 2, 
+            transition={{
+              duration: 2,
               repeat: Infinity,
-              repeatType: 'loop'
+              repeatType: 'loop',
             }}
           />
         )}

@@ -64,18 +64,18 @@ export function CartProvider({ children }: { children: ReactNode }) {
   // Добавить товар. openCart: при true открывает корзину (по умолчанию), при false — только добавляет (для кнопки + в меню).
   const addToCart = (product: Omit<CartItem, 'quantity'>, options?: { openCart?: boolean }) => {
     const openCart = options?.openCart !== false
-    setItems(current => {
+    setItems((current) => {
       // Для кастомизированных товаров используем уникальный ID, поэтому просто добавляем
       if (product.customizations) {
         return [...current, { ...product, quantity: 1 }]
       }
-      
+
       // Для обычных товаров проверяем существование и увеличиваем количество
-      const existing = current.find(item => item.id === product.id && !item.customizations)
+      const existing = current.find((item) => item.id === product.id && !item.customizations)
       if (existing) {
-        return current.map(item =>
-          item.id === product.id && !item.customizations 
-            ? { ...item, quantity: item.quantity + 1 } 
+        return current.map((item) =>
+          item.id === product.id && !item.customizations
+            ? { ...item, quantity: item.quantity + 1 }
             : item
         )
       }
@@ -86,16 +86,16 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   // Удалить товар (полностью)
   const removeFromCart = (id: string) => {
-    setItems(current => current.filter(item => item.id !== id))
+    setItems((current) => current.filter((item) => item.id !== id))
   }
 
   // Установить количество товара (для кнопок − / + в меню). Если quantity < 1 — товар удаляется.
   const setItemQuantity = (id: string, quantity: number) => {
-    setItems(current => {
-      const item = current.find(i => i.id === id)
+    setItems((current) => {
+      const item = current.find((i) => i.id === id)
       if (!item) return current
-      if (quantity < 1) return current.filter(i => i.id !== id)
-      return current.map(i => (i.id === id ? { ...i, quantity } : i))
+      if (quantity < 1) return current.filter((i) => i.id !== id)
+      return current.map((i) => (i.id === id ? { ...i, quantity } : i))
     })
   }
 
@@ -110,23 +110,25 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   // Получить количество конкретного товара (для кнопок + / - в меню)
   const getItemCount = (id: string) => {
-    const item = items.find(i => i.id === id)
+    const item = items.find((i) => i.id === id)
     return item ? item.quantity : 0
   }
 
   return (
-    <CartContext.Provider value={{ 
-      items, 
-      addToCart, 
-      removeFromCart, 
-      setItemQuantity,
-      clearCart, 
-      totalPrice,
-      totalItems,
-      isCartOpen, 
-      setIsCartOpen,
-      getItemCount
-    }}>
+    <CartContext.Provider
+      value={{
+        items,
+        addToCart,
+        removeFromCart,
+        setItemQuantity,
+        clearCart,
+        totalPrice,
+        totalItems,
+        isCartOpen,
+        setIsCartOpen,
+        getItemCount,
+      }}
+    >
       {children}
     </CartContext.Provider>
   )

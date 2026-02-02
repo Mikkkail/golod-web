@@ -6,30 +6,35 @@
 **Фреймворк:** Next.js 16.1.6  
 **Язык:** TypeScript  
 **Стилизация:** Tailwind CSS  
-**Анимации:** Framer Motion  
+**Анимации:** Framer Motion
 
 ---
 
 ## 🚀 Быстрый старт
 
 ### Установка зависимостей:
+
 ```bash
 npm install
 ```
 
 ### Запуск dev сервера:
+
 ```bash
 npm run dev
 ```
+
 Откройте http://localhost:3000
 
 ### Сборка для production:
+
 ```bash
 npm run build
 npm start
 ```
 
 ### Деплой на Vercel:
+
 ```bash
 vercel --prod
 ```
@@ -72,35 +77,41 @@ website/
 ## ✨ Основные функции
 
 ### 1. Hero Slider
+
 - Автоматическая смена слайдов (5 сек)
 - 3 слайда с разными бургерами
 - Плавные fade-in/fade-out анимации
 - Pagination dots
 
 ### 2. Categories
+
 - Sticky позиция под header
 - Горизонтальный скролл
 - Активная категория с оранжевым свечением
 
 ### 3. Product Grid
+
 - Сетка 2 колонки
 - Skeleton loaders
 - Hover эффекты
 - Быстрое добавление в корзину
 
 ### 4. Product Customizer
+
 - Модальное окно кастомизации
 - Добавки и исключения
 - Динамический расчет цены
 - Выбор количества
 
 ### 5. Cart
+
 - Sidebar корзина
 - Управление количеством
 - Сохранение в localStorage
 - Отображение кастомизаций
 
 ### 6. PWA
+
 - Manifest.json
 - Service Worker
 - Offline поддержка
@@ -111,21 +122,19 @@ website/
 ## 🎨 Дизайн
 
 ### Цвета:
+
 ```css
---background: #0A0A0A
---card: #1A1A1A
---accent: #F97316
---text: #FFFFFF
---text-secondary: #9CA3AF
+--background: #0a0a0a --card: #1a1a1a --accent: #f97316 --text: #ffffff --text-secondary: #9ca3af;
 ```
 
 ### Шрифты:
+
 ```css
---font-inter: Inter, sans-serif
---font-oswald: Oswald, sans-serif
+--font-inter: Inter, sans-serif --font-oswald: Oswald, sans-serif;
 ```
 
 ### Скругления:
+
 ```css
 rounded-3xl: 24px (карточки, кнопки)
 rounded-full: 9999px (бейджи, иконки)
@@ -136,6 +145,7 @@ rounded-full: 9999px (бейджи, иконки)
 ## 📦 Зависимости
 
 ### Основные:
+
 - `next`: 16.1.6
 - `react`: 19.1.0
 - `typescript`: 5.9.3
@@ -143,6 +153,7 @@ rounded-full: 9999px (бейджи, иконки)
 - `framer-motion`: 12.0.0
 
 ### UI:
+
 - `lucide-react`: 0.469.0 (иконки)
 - `clsx`: 2.1.1
 - `tailwind-merge`: 2.6.0
@@ -152,17 +163,17 @@ rounded-full: 9999px (бейджи, иконки)
 ## 🔧 Конфигурация
 
 ### next.config.js
+
 ```javascript
 export default {
   images: {
-    remotePatterns: [
-      { protocol: 'https', hostname: 'images.unsplash.com' }
-    ]
-  }
+    remotePatterns: [{ protocol: 'https', hostname: 'images.unsplash.com' }],
+  },
 }
 ```
 
 ### tailwind.config.ts
+
 ```typescript
 theme: {
   extend: {
@@ -180,9 +191,11 @@ theme: {
 ## 🌐 Деплой
 
 ### Production URL:
+
 https://my-first2.vercel.app
 
 ### Vercel настройки:
+
 - Framework: Next.js
 - Build Command: `npm run build`
 - Output Directory: `.next`
@@ -208,7 +221,7 @@ https://my-first2.vercel.app
 
 **Разработчик:** Mikkkail  
 **Email:** mixxxaillr@yandex.ru  
-**Телефон:** +7 (928) 678-06-66  
+**Телефон:** +7 (928) 678-06-66
 
 ---
 

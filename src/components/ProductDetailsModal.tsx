@@ -101,9 +101,7 @@ export default function ProductDetailsModal({
 
         <div className="flex-1 overflow-y-auto px-6 pb-10 pt-6">
           <div className="flex flex-wrap items-start justify-between gap-3">
-            <h3 className="text-2xl font-bold text-white">
-              {product.title}
-            </h3>
+            <h3 className="text-2xl font-bold text-white">{product.title}</h3>
             {product.weight ? (
               <span className="rounded-full bg-white/10 px-3 py-1 text-xs text-gray-300">
                 {product.weight}
@@ -111,9 +109,7 @@ export default function ProductDetailsModal({
             ) : null}
           </div>
 
-          <p className="mt-4 text-sm leading-6 text-gray-400">
-            {product.description}
-          </p>
+          <p className="mt-4 text-sm leading-6 text-gray-400">{product.description}</p>
 
           {ingredients.length > 0 ? (
             <div className="mt-6">
@@ -124,9 +120,7 @@ export default function ProductDetailsModal({
                     key={ingredient.id}
                     className="flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs text-gray-300"
                   >
-                    <span className="text-xs font-bold text-white">
-                      {ingredient.icon ?? '*'}
-                    </span>
+                    <span className="text-xs font-bold text-white">{ingredient.icon ?? '*'}</span>
                     {ingredient.label}
                   </span>
                 ))}

@@ -39,42 +39,40 @@ export function Preloader() {
   }, [])
 
   return (
-    <AnimatePresence mode='wait'>
+    <AnimatePresence mode="wait">
       {isLoading && (
         <motion.div
           key="preloader"
           // Шторка уезжает вверх (-100%) с красивой инерцией
-          exit={{ y: "-100%", transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } }}
+          exit={{ y: '-100%', transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } }}
           className="fixed inset-0 z-[99999] flex items-center justify-center bg-[#050505] text-white"
         >
-          <div className="flex flex-col items-center justify-center relative">
-            
+          <div className="relative flex flex-col items-center justify-center">
             {/* Пульсирующий Логотип */}
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
-              className="text-6xl md:text-9xl font-black uppercase italic tracking-tighter mb-2"
+              transition={{ duration: 1, repeat: Infinity, repeatType: 'reverse' }}
+              className="mb-2 text-6xl font-black uppercase italic tracking-tighter md:text-9xl"
             >
               GOLOD<span className="text-orange-500">.</span>
             </motion.h1>
 
             {/* Текст "Loading..." */}
-            <div className="flex items-center gap-4 mt-4">
-               {/* Прогресс бар (линия) */}
-               <div className="w-32 h-[2px] bg-white/10 rounded-full overflow-hidden">
-                  <motion.div 
-                    className="h-full bg-orange-500"
-                    initial={{ width: 0 }}
-                    animate={{ width: `${counter}%` }}
-                  />
-               </div>
-               {/* Цифры */}
-               <span className="text-xl font-bold font-mono text-orange-500 w-12 text-right">
-                 {counter}%
-               </span>
+            <div className="mt-4 flex items-center gap-4">
+              {/* Прогресс бар (линия) */}
+              <div className="h-[2px] w-32 overflow-hidden rounded-full bg-white/10">
+                <motion.div
+                  className="h-full bg-orange-500"
+                  initial={{ width: 0 }}
+                  animate={{ width: `${counter}%` }}
+                />
+              </div>
+              {/* Цифры */}
+              <span className="w-12 text-right font-mono text-xl font-bold text-orange-500">
+                {counter}%
+              </span>
             </div>
-
           </div>
         </motion.div>
       )}
