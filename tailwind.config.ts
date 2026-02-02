@@ -64,10 +64,15 @@ const config: Config = {
           '0%, 100%': { transform: 'translate(0, 0)' },
           '50%': { transform: 'translate(var(--x), var(--y))' },
         },
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
       },
       animation: {
         'fade-in-up': 'fade-in-up 0.6s ease-out',
         magnetic: 'magnetic 0.3s ease-out',
+        marquee: 'marquee 20s linear infinite',
       },
     },
   },
