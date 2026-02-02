@@ -94,7 +94,7 @@ export default function MenuPage() {
                 <p className="mb-6 font-light text-gray-400">{category.description}</p>
               </motion.div>
 
-              <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
+              <div className="grid grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-4">
                 {category.items.map((item, index) => {
                   const itemCount = getItemCount(item.id)
                   const isLoading = imageLoading[item.id]
