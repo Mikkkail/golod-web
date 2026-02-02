@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%; /* Очень темный, почти черный #0a0a0a */
+    --foreground: 0 0% 98%; /* Почти белый */
+    --primary: 24 90% 55%; /* Яркий оранжевый #f97316 */
+    --card: 0 0% 7%;
+    --border: 0 0% 15%;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-[#050505] text-white antialiased overflow-x-hidden;
+    /* Привязка шрифтов через переменные (настроим в layout.tsx) */
+    font-family: var(--font-inter), sans-serif;
+  }
+
+  /* Заголовки - дерзкие и узкие */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-oswald), sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  /* Видимое фокус-кольцо для клавиатурной навигации */
+  a:focus-visible,
+  button:focus-visible {
+    outline: none;
+  }
+
+  /* Эффект шума (Grain) поверх всего сайта */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05; /* Еле заметный шум */
+    pointer-events: none;
+    z-index: 50;
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    mix-blend-mode: overlay;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-red-600;
+  }
+
+  /* Skeleton Loader Animation */
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite linear;
+    background: linear-gradient(
+      to right,
+      #1A1A1A 0%,
+      #2A2A2A 20%,
+      #1A1A1A 40%,
+      #1A1A1A 100%
+    );
+    background-size: 1000px 100%;
+  }
+
+  /* Эффект стекла */
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+
+  /* Карточки Bento */
+  .bento-card {
+    @apply relative overflow-hidden rounded-3xl p-6 bg-[#0f0f0f] border border-white/5 hover:border-orange-500/30 transition-all duration-300;
+  }
+  
+  /* Свечение при наведении */
+  .bento-card:hover {
+    box-shadow: 0 0 30px -5px rgba(234, 88, 12, 0.15);
+  }
+}
+
+/* Табы меню на мобиле: горизонтальный скролл без видимой полосы */
+.tabs-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.tabs-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Скрыть скроллбар для элементов с классом no-scrollbar */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Красивый скроллбар */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ea580c;
+}
+
+/* Цвет выделения текста */
+::selection {
+  background: rgba(234, 88, 12, 0.3);
+  color: white;
+}/* Скрываем стандартный курсор только на компьютерах (если CustomCursor активен) */
+@media (min-width: 768px) {
+  .desktop-custom-cursor body, 
+  .desktop-custom-cursor a, 
+  .desktop-custom-cursor button {
+    cursor: none !important;
+  }
+}/* Анимация пробегающего блика для стекла */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Поддержка safe area для iOS (notch) */
+@supports (padding: max(0px)) {
+  .pb-safe {
+    padding-bottom: max(env(safe-area-inset-bottom), 0px);
+  }
+}
+
+/* Мобильная оптимизация */
+@media (max-width: 768px) {
+  /* Отключаем анимации на слабых устройствах */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
+  /* Улучшаем производительность скролла */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+}
