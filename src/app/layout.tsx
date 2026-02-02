@@ -5,7 +5,6 @@ import './globals.css'
 import { CartProvider } from '@/context/CartContext'
 import CartSidebar from '@/components/CartSidebar'
 import { Navbar } from '@/components/Navbar'
-import { BottomTabBar } from '@/components/BottomTabBar'
 
 // Импортируем наши визуальные эффекты
 import { SmoothScroll } from '@/components/ui/SmoothScroll'
@@ -84,7 +83,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="pb-20 antialiased">
+      <body className="antialiased">
         <CartProvider>
           {/* 2. Вставляем Прелоадер самым первым */}
           <Preloader />
@@ -100,7 +99,6 @@ export default function RootLayout({
 
           <main className="min-h-screen">{children}</main>
 
-          <BottomTabBar />
           <CartSidebar />
         </CartProvider>
       </body>
