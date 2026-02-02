@@ -7,10 +7,10 @@ import { useCart } from '@/context/CartContext'
 import Link from 'next/link'
 
 const navLinks = [
-  { label: 'Меню', href: '#menu' },
-  { label: 'Акции', href: '#promo' },
-  { label: 'О нас', href: '#about' },
-  { label: 'Контакты', href: '#contact' },
+  { label: 'Меню', href: '/menu' },
+  { label: 'Акции', href: '/promo' },
+  { label: 'О нас', href: '/#about' },
+  { label: 'Контакты', href: '/#contact' },
 ]
 
 export function Navbar() {
@@ -75,13 +75,13 @@ export function Navbar() {
           aria-label="Основное меню"
         >
           {navLinks.map(({ label, href }) => (
-            <a
+            <Link
               key={label}
               href={href}
               className="rounded text-sm font-bold uppercase tracking-widest text-gray-400 transition-colors hover:text-white focus:outline-none focus-visible:text-white focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
             >
               {label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -156,16 +156,16 @@ export function Navbar() {
                 </button>
               </div>
               <nav className="flex flex-1 flex-col gap-2 p-6" aria-label="Мобильное меню">
-                {navLinks.map(({ label, href }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    onClick={closeMobileMenu}
-                    className="rounded-xl px-4 py-4 text-lg font-bold uppercase tracking-wider text-gray-300 transition-colors hover:bg-white/5 hover:text-white"
-                  >
-                    {label}
-                  </a>
-                ))}
+{navLinks.map(({ label, href }) => (
+                    <Link
+                      key={label}
+                      href={href}
+                      onClick={closeMobileMenu}
+                      className="rounded-xl px-4 py-4 text-lg font-bold uppercase tracking-wider text-gray-300 transition-colors hover:bg-white/5 hover:text-white"
+                    >
+                      {label}
+                    </Link>
+                  ))}
               </nav>
               <div className="border-t border-white/10 p-6">
                 <a
